@@ -35,7 +35,7 @@ int chad_exit(char** exit) {
 
 int builtin_execute(char** args) {
 	if (args[0] == NULL) {
-		return 1;
+		return -1;
 	}
 
 	for (size_t i = 0; i < chad_num_builtins(); ++i) {
@@ -43,5 +43,5 @@ int builtin_execute(char** args) {
 			return (*builtin_func[i])(args);
 		}	
 	}
-	return 1;
+	return -1;
 }
