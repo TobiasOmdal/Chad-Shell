@@ -92,11 +92,11 @@ static int exec_cmd(char** args) {
 	pid = fork();
 	if (pid == 0) {
 		if (execvp(args[0], args) == -1) {
-			perror("shell");
+			perror("chad shell");
 		}
 		exit(EXIT_FAILURE);
 	} else if (pid < 0) {
-		perror("shell");
+		perror("chad shell");
 	} else {
 		do {
 			wpid = waitpid(pid, &status, WUNTRACED); 
