@@ -2,6 +2,11 @@ cmake_minimum_required(VERSION 3.5)
 
 project(chad_shell)
 
-add_executable(chadshell chadshell.c builtins.c)
+include_directories(${PROJECT_SOURCE_DIR}/src)
 
-target_link_libraries(chadshell)
+file(GLOB all_srcs
+						"${PROJECT_SOURCE_DIR}/src/*.c"
+						"${PROJECT_SOURCE_DIR}/src/*.h"
+						)
+
+add_executable(chadshell ${all_srcs})
