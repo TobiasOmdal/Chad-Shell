@@ -1,5 +1,8 @@
 # Chad Shell
 
+##Requirements
+Uses POSIX standards so the <unistd.h> header is required. 
+
 ## Build
 ```bash
 cmake -B build
